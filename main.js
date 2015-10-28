@@ -1,13 +1,13 @@
 function complements(array, number){
-   answer = array.map(function(item){
-     return item + array[array.indexOf((number === item +))]
+  for(x = 0; x < array.length; x++){
+    for (var i = x; i < array.length; i++) {
+      if((array[x] + array[i]) === number){
+        return true;
+      }
+    }
+  }
+  return false;
 };
-
-  if(answer.length === 0)
-    return false;
-  else
-    return true;
-}
 
 var odds = [1, 3, 5, 7, 9, 11]
 var ints = [-11, 40, 17, -5, -1, -11, 2, 9]
